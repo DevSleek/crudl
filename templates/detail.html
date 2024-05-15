@@ -1,0 +1,16 @@
+
+
+{% block content %}
+    <div>
+        <h1>{{ object.title }}</h1>
+        <img src="{{ object.image.url }}" alt="">
+        <video src="{{ object.video.url }}"></video>
+        <audio src="{{ object.voice.url }}"></audio>
+    </div>
+    
+    <a href="{% url 'update' post.pk %}" style="text-decoration: none">Tahrirlash</a> |
+    <a href="{% url 'delete' post.pk %}" style="text-decoration: none">O'chirish</a>
+    <button>
+        <a href="{% url 'posts' %}" style="text-decoration: none">Barcha postlar</a>
+    </button>
+{% endblock %}

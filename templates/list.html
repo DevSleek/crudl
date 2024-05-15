@@ -1,0 +1,9 @@
+
+{% block content %}
+    {% for obj in object_list %}
+        <h1>
+            <a href="{% url 'detail' obj.pk %}" style="text-decoration: none">{{ obj.title }}</a>
+        </h1>
+    {% endfor %}
+    <button><a href="{% url 'create' %}" style="text-decoration: none">Yangi post</a></button>
+{% endblock %}

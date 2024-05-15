@@ -1,0 +1,10 @@
+{% extends 'list.html' %}
+
+{% block content %}
+    <h1>Postni tahrirlash</h1>
+    <form method="post" enctype="multipart/form-data">{% csrf_token %}
+        {{ form.media }}
+        {{ form.as_p }}
+        <button>yangilash</button>
+    </form>
+{% endblock %}
